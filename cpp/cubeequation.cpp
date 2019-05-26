@@ -14,12 +14,15 @@ int main() {
             map[a*a*a + b*b*b].push_back(std::pair<int, int>(a, b));
         }
     }
+    int count = 0;
     for (auto& kv : map) {
         for (auto& p1 : kv.second) {
             for (auto& p2 : kv.second) {
                 std::cout << p1.first << " " << p1.second << " "
                           << p2.first << " " << p2.second << std::endl;
+                count += 1;
             }
         }
     }
+    std::cout << count << std::endl;
 }
