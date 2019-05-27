@@ -243,3 +243,6 @@ tags
 [._]*.un~
 
 # End of https://www.gitignore.io/api/c,vim,c++,java,python
+
+# Ignore all the test files
+test.*
