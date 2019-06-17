@@ -79,7 +79,7 @@ int main()
   quicksort(data, 0, 14);
   for ( int i : data)
     cout << i << endl;
-  
+
   cout << "Count = " << count;
 
   return 0;
