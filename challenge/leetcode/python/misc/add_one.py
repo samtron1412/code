@@ -1,24 +1,16 @@
-"""Giving an array of digits that represents an integer
-Adding one to that number
-
->>> add_one([9])
-[1, 0]
->>> add_one([1])
-[2]
->>> add_one([1, 2])
-[1, 3]
->>> add_one([9, 9])
-[1, 0, 0]
->>> add_one_recur([9])
-[1, 0]
->>> add_one_recur([1])
-[2]
->>> add_one_recur([1, 2])
-[1, 3]
->>> add_one_recur([9, 9])
-[1, 0, 0]
-"""
 def add_one(lst):
+    """Giving an array of digits that represents an integer
+    Adding one to that number
+
+    >>> add_one([9])
+    [1, 0]
+    >>> add_one([1])
+    [2]
+    >>> add_one([1, 2])
+    [1, 3]
+    >>> add_one([9, 9])
+    [1, 0, 0]
+    """
     carry = 1
     for i in range(len(lst) - 1, -1, -1):
         total = lst[i] + carry
@@ -29,6 +21,16 @@ def add_one(lst):
     return lst
 
 def add_one_recur(lst):
+    """
+    >>> add_one_recur([9])
+    [1, 0]
+    >>> add_one_recur([1])
+    [2]
+    >>> add_one_recur([1, 2])
+    [1, 3]
+    >>> add_one_recur([9, 9])
+    [1, 0, 0]
+    """
     if len(lst) == 1:
         total = lst[0] + 1
         if total > 9:
@@ -41,3 +43,6 @@ def add_one_recur(lst):
     else:
         return add_one_recur(lst[:1]) + rest[1:]
 
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
